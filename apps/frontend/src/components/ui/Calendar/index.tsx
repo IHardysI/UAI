@@ -41,13 +41,9 @@ function CustomDay(props: CustomDayProps) {
 
   return (
     <div className={dayClasses}>
-      <button
-        type="button"
-        onClick={onClick}
-        className={`absolute top-[10px] left-[7px] ${isSelected || isToday ? 'font-bold' : ''}`}
-      >
+      <div className={`absolute top-[10px] left-[7px] ${isSelected || isToday ? 'font-bold' : ''}`}>
         {date.getDate()}
-      </button>
+      </div>
       {!isOutside && dayEvents.length > 0 && (
         <div className="flex flex-col justify-end gap-1.5 w-full h-full">
           {eventsToShow.map((event, i) => (

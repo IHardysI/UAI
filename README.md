@@ -1,49 +1,49 @@
-# Aicharm Template
+# Template
 
-Шаблонный проект с использованием монорепозитория, где фронтенд на **Next.js** управляется через **pnpm**, а бэкенд на **Elysia** работает через **Bun**.
+Template project using a monorepo structure, where the frontend on **Next.js** is managed through **pnpm**, and the backend on **Elysia** runs through **Bun**.
 
-## Развёртывание проекта
+## Project Deployment
 
-### Убедитесь, что на компьютере установлены:
+### Make sure you have the following installed on your computer:
 
-1. **Node.js** (версия `>=20.11.0`):
+1. **Node.js** (version `>=20.11.0`):
     ```bash
     node -v
     ```
 
-2. **pnpm** (установите глобально, если ещё не установлен):
+2. **pnpm** (install globally if not already installed):
     ```bash
     npm install -g pnpm
     ```
 
-3. **Bun** (для работы бэкенда):
-    Установите Bun:
+3. **Bun** (for backend operations):
+    Install Bun:
     ```bash
     curl -fsSL https://bun.sh/install | bash
     ```
 
 ---
 
-### Установка и запуск проекта
+### Installation and Running the Project
 
-1. Установите зависимости:
+1. Install dependencies:
     ```bash
     pnpm install
     ```
 
-2. Запустите проект (одновременно фронтенд и бэкенд):
+2. Run the project (frontend and backend simultaneously):
     ```bash
     pnpm run dev
     ```
 
 ---
 
-### Проверка
+### Verification
 
-После запуска:
-- Фронтенд будет доступен по адресу: [http://localhost:3000](http://localhost:3000)
-- Бэкенд будет доступен по адресу: [http://localhost:3001](http://localhost:3001)
+After launching:
+- Frontend will be available at: [http://localhost:3000](http://localhost:3000)
+- Backend will be available at: [http://localhost:3001](http://localhost:3001)
 
 ---
 
-Если возникнут вопросы или проблемы с запуском, проверьте, что версии Node.js, pnpm и Bun соответствуют требованиям.
+If you have any questions or issues with launching, check that your Node.js, pnpm, and Bun versions meet the requirements.

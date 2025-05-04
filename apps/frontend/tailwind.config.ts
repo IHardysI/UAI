@@ -27,9 +27,10 @@ const config: Config = {
       ...animations,
       ...typography,
       boxShadow: {
+        'blue-drop': '10px 14px 40px 0 #2D7AFF2B',
         'base': '10px 25px 40px 0 rgba(0, 0, 0, 0.07)',
-        'purple-drop': '10px 14px 40px 0 #833DD92B',
-        'blue-drop':   '10px 14px 40px 0 #2D7AFF2B',
+        'base-bg': '10px 55px 40px 0 #84FF0033',
+        'sidebar': '8px 8px 30px 0 rgba(0, 0, 0, 0.07)',  
         'pink-drop':   '10px 14px 40px 0 #D13DD92B',
         'orange-drop': '0 4px 114px 0 #FE7733',
         'violet-drop': '0 4px 114px 0 #FBADFF',

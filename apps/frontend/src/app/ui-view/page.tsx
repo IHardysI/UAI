@@ -7,6 +7,7 @@ import CheckCard from '@/components/ui/CheckCard';
 import { CheckCardSm } from '@/components/ui/CheckCardSm';
 import { Input } from '@/components/ui/input';
 import Image from 'next/image';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 import { assistantParams } from '@/components/entities/assistantParams.ts';
 import { blogLevelParams } from '@/components/entities/blogLevelParams';
@@ -55,7 +56,7 @@ export default function Ui() {
           <Button size={'sm'} variant={'outline'}>
             Реестрація
           </Button>
-          <Input placeholder="Напиши своє ім’я..." />
+          <Input placeholder="Напиши своє ім'я..." />
           <CheckCardBig
             id="check1"
             label="Понеділок | 01.02"
@@ -84,16 +85,19 @@ export default function Ui() {
           />
           <CheckCardBig
             id="check1"
-            label="П’ятниця  | 01.02"
+            label="П'ятниця  | 01.02"
             labelColor="secondary"
             variant={'default'}
           />
-          <CheckCard id="check" label="Менше 1 год на день" variant={'green'} />
-          <CheckCard
-            id="check"
-            label="Більше 2 годин на день"
-            variant={'default'}
-          />
+          <RadioGroup defaultValue="less-than-1-hour" name="time-selection">
+            <CheckCard id="check" label="Менше 1 год на день" variant={'green'} value="less-than-1-hour" />
+            <CheckCard
+              id="check"
+              label="Більше 2 годин на день"
+              variant={'default'}
+              value="more-than-2-hours"
+            />
+          </RadioGroup>
           <CheckCardSm
             id="check1"
             label="Іншае пытанне: чаму смеласць важней за розум?"

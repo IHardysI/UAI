@@ -27,20 +27,20 @@ export default function Registration() {
             className="w-1/2"
             type="text"
             placeholder="Ваше ім’я"
-            shadow="shadow-pink-drop"
+            shadow="shadow-violet-drop"
           />
           <Input
             className="w-1/2"
             type="text"
             placeholder="Ваше прізвище"
-            shadow="shadow-pink-drop"
+            shadow="shadow-violet-drop"
           />
         </div>
         <Input
           className=""
           type="email"
           placeholder="Ваш email"
-          shadow="shadow-purple-drop"
+          shadow="shadow-pink-drop"
         />
         <div className="relative w-full">
           <Input

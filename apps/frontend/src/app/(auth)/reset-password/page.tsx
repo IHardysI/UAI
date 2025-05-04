@@ -21,7 +21,7 @@ export default function ResetPassword() {
   return (
     <div className="flex flex-col items-center font-base">
       <h1 className="text-biggest font-bold mb-5">Відновлення пароля</h1>
-      <p className="font-light text-regular mb-[30px] max-w-[383px]">
+      <p className="font-light text-regular mb-[30px] max-w-[383px] text-center">
         Введіть свою адресу електронної пошти, на яку прийде посилання з кодом
         для скидання пароля.
       </p>
@@ -33,7 +33,7 @@ export default function ResetPassword() {
             type="email"
             name="email"
             placeholder="Ваш email"
-            shadow="shadow-purple-drop"
+            shadow="shadow-pink-drop"
             required
           />
         </div>

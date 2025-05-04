@@ -3,13 +3,13 @@
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/components/lib/utils';
-import { Checkbox } from '@/components/ui/checkbox';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
-const checkCardSmVariants = cva('rounded-base flex items-center text-medium font-bold justify-between shadow-base', {
+const radioCardVariants = cva('rounded-base flex items-center text-medium font-bold justify-between', {
   variants: {
     variant: {
-      default: 'bg-cWhite',
-      green: 'bg-cLime',
+      default: 'bg-cWhite shadow-base',
+      green: 'bg-cLime shadow-base-bg',
     },
     size: {
       default: 'w-[414px] pl-[50px] pr-[29px] py-[29px]',
@@ -33,33 +33,60 @@ const textVariants = cva('', {
   },
 });
 
-export interface CheckCardProps
+// Individual RadioCard Item props
+export interface RadioCardProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof checkCardSmVariants> {
+    VariantProps<typeof radioCardVariants> {
   id: string;
   label: string;
   labelColor?: 'primary' | 'secondary';
+  value: string;
 }
 
-export const CheckCard: React.FC<CheckCardProps> = ({
+// Individual RadioCard Item component
+export const RadioCard: React.FC<RadioCardProps> = ({
   className,
   variant = 'default',
   size,
   id,
+  value,
   label,
   labelColor = 'primary',
   ...props
 }) => {
   return (
     <div
-      className={cn(checkCardSmVariants({ variant, size, className }))}
+      className={cn(radioCardVariants({ variant, size, className }))}
       {...props}>
       <p className={cn(textVariants({ color: labelColor }), 'w-[242px]')}>
         {label}
       </p>
-      <Checkbox id={id} />
+      <RadioGroupItem id={id} value={value || id} />
     </div>
   );
 };
 
-export default CheckCard;
+// Props for the RadioCardGroup component
+export interface RadioCardGroupProps extends React.ComponentPropsWithoutRef<typeof RadioGroup> {
+  children: React.ReactNode;
+  className?: string;
+}
+
+// RadioCardGroup component that wraps children in a RadioGroup
+export const RadioCardGroup: React.FC<RadioCardGroupProps> = ({
+  children,
+  className,
+  ...props
+}) => {
+  return (
+    <RadioGroup className={cn("space-y-4", className)} {...props}>
+      {children}
+    </RadioGroup>
+  );
+};
+
+// Maintain backward compatibility
+export const CheckCard = RadioCard;
+export const CheckCardGroup = RadioCardGroup;
+
+export default RadioCard;

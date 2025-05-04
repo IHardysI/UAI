@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import UaiLogo from '~/images/uai/uai-logo.svg'
 
 export const metadata: Metadata = {
-  title: 'Auth page',
+  title: 'Choose page',
 };
 
 interface AuthLayoutProps {

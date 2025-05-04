@@ -27,7 +27,7 @@ export default function LoginPage() {
             className=""
             type="email"
             placeholder="Ваш email"
-            shadow="shadow-purple-drop"
+            shadow="shadow-pink-drop"
           />
         </div>
         <div className="relative w-[373px]">
